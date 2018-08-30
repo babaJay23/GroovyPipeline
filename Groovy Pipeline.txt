@@ -1,0 +1,24 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        stages ("Continuous Download')
+        {
+            steps
+            {
+                echo 'Download the code from git'
+            }
+        }
+    }
+    post
+    {
+        success
+        {
+            echo 'Above step is successfull'
+        }
+        failure
+        {
+            echo 'Above step is a failure'
+        }
+    }
